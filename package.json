@@ -1,0 +1,14 @@
+{
+  "name": "knowledge-context-graph-template",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint:graph": "node scripts/graph-lint.mjs",
+    "export:graph": "node scripts/graph-export.mjs --pretty --out dist/graph.json",
+    "report:graph": "node scripts/graph-health-report.mjs",
+    "bundle:view": "node scripts/context-bundle.mjs"
+  }
+}
