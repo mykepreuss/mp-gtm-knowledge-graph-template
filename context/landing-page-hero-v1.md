@@ -11,24 +11,24 @@ tags:
   - gtm
 task: Write a landing page hero and problem section that signals ICP fit, names the enemy, and stays proof-aware.
 seed_nodes:
-  - "[[kb/canon/product-truth]]"
-  - "[[kb/canon/positioning]]"
-  - "[[kb/canon/nomenclature]]"
-  - "[[kb/canon/trust-boundaries]]"
-  - "[[kb/canon/voice]]"
+  - "[[kg/canon/product-truth]]"
+  - "[[kg/canon/positioning]]"
+  - "[[kg/canon/nomenclature]]"
+  - "[[kg/canon/trust-boundaries]]"
+  - "[[kg/canon/voice]]"
 links:
   - rel: DEPENDS_ON
-    href: "[[kb/canon/product-truth]]"
+    href: "[[kg/canon/product-truth]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/positioning]]"
+    href: "[[kg/canon/positioning]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/nomenclature]]"
+    href: "[[kg/canon/nomenclature]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/trust-boundaries]]"
+    href: "[[kg/canon/trust-boundaries]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/voice]]"
+    href: "[[kg/canon/voice]]"
   - rel: LINKS_TO
-    href: "[[kb/rubrics/gtm-asset-review]]"
+    href: "[[kg/rubrics/gtm-asset-review]]"
 ---
 
 # Landing page hero + problem section (v1)

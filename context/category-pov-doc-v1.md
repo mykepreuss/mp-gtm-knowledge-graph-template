@@ -16,15 +16,15 @@ seed_ids:
   - "kcg:canon:icp"
   - "kcg:canon:proof-map"
 seed_nodes:
-  - "[[kb/canon/category-pov]]"
-  - "[[kb/canon/positioning]]"
-  - "[[kb/canon/icp]]"
-  - "[[kb/canon/proof-map]]"
+  - "[[kg/canon/category-pov]]"
+  - "[[kg/canon/positioning]]"
+  - "[[kg/canon/icp]]"
+  - "[[kg/canon/proof-map]]"
 links:
   - rel: DEPENDS_ON
-    href: "[[kb/canon/category-pov]]"
+    href: "[[kg/canon/category-pov]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/positioning]]"
+    href: "[[kg/canon/positioning]]"
 ---
 
 # Category POV doc (v1)

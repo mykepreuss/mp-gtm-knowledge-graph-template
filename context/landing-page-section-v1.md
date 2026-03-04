@@ -18,19 +18,19 @@ seed_ids:
   - "kcg:canon:proof-map"
   - "kcg:canon:voice"
 seed_nodes:
-  - "[[kb/canon/product-truth]]"
-  - "[[kb/canon/icp]]"
-  - "[[kb/canon/category-pov]]"
-  - "[[kb/canon/positioning]]"
-  - "[[kb/canon/proof-map]]"
-  - "[[kb/canon/voice]]"
+  - "[[kg/canon/product-truth]]"
+  - "[[kg/canon/icp]]"
+  - "[[kg/canon/category-pov]]"
+  - "[[kg/canon/positioning]]"
+  - "[[kg/canon/proof-map]]"
+  - "[[kg/canon/voice]]"
 links:
   - rel: DEPENDS_ON
-    href: "[[kb/canon/product-truth]]"
+    href: "[[kg/canon/product-truth]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/icp]]"
+    href: "[[kg/canon/icp]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/voice]]"
+    href: "[[kg/canon/voice]]"
 ---
 
 # Landing page section (v1)

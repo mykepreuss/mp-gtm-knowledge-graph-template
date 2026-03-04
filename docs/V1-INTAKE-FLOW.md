@@ -14,11 +14,11 @@ Pick one:
 
 2) STRICT v1 (recommended if you operate in high-risk domains)
 - Refuses to mark anything “Grounded” without an inspectable proof artifact.
-- Forces you to create `kb/sources/*` nodes for evidence up front.
+- Forces you to create `kg/sources/*` nodes for evidence up front.
 
 ## How to use (either mode)
 
-1) Open this repo’s `kb/canon/*` files so you can paste answers back into the repo.
+1) Open this repo’s `kg/canon/*` files so you can paste answers back into the repo.
 2) Paste the chosen prompt below into ChatGPT.
 3) Answer the questions. When you do not know, say `TBD`.
 4) At the end, apply the generated “Patch pack” into this repo and run:
@@ -51,21 +51,21 @@ Process rules:
 Deliverable at the end:
 Return a “Patch pack” with updated content for these files (use the same headings that already exist in each file):
 
-1) kb/canon/product-truth.md
-2) kb/canon/icp.md
-3) kb/canon/category-pov.md
-4) kb/canon/positioning.md
-5) kb/canon/proof-map.md
-6) kb/canon/voice.md
+1) kg/canon/product-truth.md
+2) kg/canon/icp.md
+3) kg/canon/category-pov.md
+4) kg/canon/positioning.md
+5) kg/canon/proof-map.md
+6) kg/canon/voice.md
 
 Optional if time:
-- kb/canon/nomenclature.md
-- kb/canon/trust-boundaries.md
-- kb/canon/claim-labels.md
+- kg/canon/nomenclature.md
+- kg/canon/trust-boundaries.md
+- kg/canon/claim-labels.md
 
 Also return:
-- 1–3 new kb/sources/* nodes I should create (each as a full Markdown file with frontmatter)
-- 1–3 new kb/entities/* nodes I should create (capabilities or terms) (each as a full Markdown file with frontmatter)
+- 1–3 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
+- 1–3 new kg/entities/* nodes I should create (capabilities or terms) (each as a full Markdown file with frontmatter)
 - A first-run recommendation:
   - which view (context/*.md) to start with
   - which workflow + template + rubric pair to use
@@ -111,20 +111,20 @@ Process rules:
 Deliverable at the end:
 Return a “Patch pack” with updated content for these files (use the same headings that already exist in each file):
 
-1) kb/canon/trust-boundaries.md
-2) kb/canon/claim-labels.md (minimal changes are fine)
-3) kb/canon/nomenclature.md
-4) kb/canon/voice.md
-5) kb/canon/product-truth.md
-6) kb/canon/icp.md
-7) kb/canon/positioning.md
-8) kb/canon/category-pov.md
-9) kb/canon/proof-map.md
+1) kg/canon/trust-boundaries.md
+2) kg/canon/claim-labels.md (minimal changes are fine)
+3) kg/canon/nomenclature.md
+4) kg/canon/voice.md
+5) kg/canon/product-truth.md
+6) kg/canon/icp.md
+7) kg/canon/positioning.md
+8) kg/canon/category-pov.md
+9) kg/canon/proof-map.md
 
 Also return:
-- 2–6 new kb/sources/* nodes I should create (each as a full Markdown file with frontmatter)
+- 2–6 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
   - include “Last verified” dates for anything that drifts
-- 2–6 new kb/entities/* nodes I should create (capabilities, terms, struggling moments) (each as a full Markdown file with frontmatter)
+- 2–6 new kg/entities/* nodes I should create (capabilities, terms, struggling moments) (each as a full Markdown file with frontmatter)
 - View upgrade plan:
   - which context/*.md view to start with
   - which seed nodes to add/remove after the first run (and why)

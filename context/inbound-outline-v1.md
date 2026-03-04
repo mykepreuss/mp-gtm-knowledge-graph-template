@@ -11,15 +11,15 @@ tags:
   - gtm
 task: Create an inbound content outline that is POV-driven and proof-aware.
 seed_nodes:
-  - "[[kb/canon/category-pov]]"
-  - "[[kb/canon/icp]]"
-  - "[[kb/canon/proof-map]]"
-  - "[[kb/canon/voice]]"
+  - "[[kg/canon/category-pov]]"
+  - "[[kg/canon/icp]]"
+  - "[[kg/canon/proof-map]]"
+  - "[[kg/canon/voice]]"
 links:
   - rel: DEPENDS_ON
-    href: "[[kb/canon/category-pov]]"
+    href: "[[kg/canon/category-pov]]"
   - rel: DEPENDS_ON
-    href: "[[kb/canon/icp]]"
+    href: "[[kg/canon/icp]]"
 ---
 
 # Inbound outline (v1)

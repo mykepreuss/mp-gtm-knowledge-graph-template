@@ -11,7 +11,7 @@ tags:
   - view
 links:
   - rel: LINKS_TO
-    href: "[[kb/knowledge-graph]]"
+    href: "[[kg/knowledge-graph]]"
   - rel: LINKS_TO
     href: "[[context/category-pov-doc-v1]]"
   - rel: LINKS_TO

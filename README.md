@@ -8,7 +8,7 @@ This is meant to be runnable infrastructure, not a docs dump.
 
 Two layers:
 
-- Knowledge graph (durable truth): `kb/`
+- Knowledge graph (durable truth): `kg/`
 - Context graph (routing/views): `context/`
 
 Everything in those folders is Markdown with YAML frontmatter and typed edges (`links:`).
@@ -60,33 +60,33 @@ If this repo is set up correctly for your org:
 
 Start by replacing the placeholder content in:
 
-- `kb/canon/product-truth.md`
-- `kb/canon/trust-boundaries.md`
-- `kb/canon/icp.md`
-- `kb/canon/category-pov.md`
-- `kb/canon/positioning.md`
-- `kb/canon/proof-map.md`
-- `kb/canon/voice.md`
-- `kb/canon/nomenclature.md`
+- `kg/canon/product-truth.md`
+- `kg/canon/trust-boundaries.md`
+- `kg/canon/icp.md`
+- `kg/canon/category-pov.md`
+- `kg/canon/positioning.md`
+- `kg/canon/proof-map.md`
+- `kg/canon/voice.md`
+- `kg/canon/nomenclature.md`
 
 Then iterate:
 
-- add entities under `kb/entities/`
-- add proof artifacts under `kb/sources/`
+- add entities under `kg/entities/`
+- add proof artifacts under `kg/sources/`
 - tighten views under `context/`
-- tighten templates/workflows/rubrics under `kb/`
+- tighten templates/workflows/rubrics under `kg/`
 
 ## Repo map (where things go)
 
-- `kb/canon/`: durable truth and boundaries
-- `kb/sources/`: proof artifacts that back claims
-- `kb/entities/`: reusable “things” (capabilities, terms, metrics, competitors)
-- `kb/frameworks/`: reusable frameworks (AEO, JTBD, capabilities→benefits)
+- `kg/canon/`: durable truth and boundaries
+- `kg/sources/`: proof artifacts that back claims
+- `kg/entities/`: reusable “things” (capabilities, terms, metrics, competitors)
+- `kg/frameworks/`: reusable frameworks (AEO, JTBD, capabilities→benefits)
 - `context/`: views (routing seed sets)
-- `kb/templates/`: generation interfaces (structure)
-- `kb/workflows/`: task interfaces (view + template + validations)
-- `kb/rubrics/`: gates and scoring (checks)
-- `kb/loops/`: “correct twice, encode once” upgrade loops
+- `kg/templates/`: generation interfaces (structure)
+- `kg/workflows/`: task interfaces (view + template + validations)
+- `kg/rubrics/`: gates and scoring (checks)
+- `kg/loops/`: “correct twice, encode once” upgrade loops
 - `scripts/`: lint/export/bundling tools
 
 ## Commands
@@ -99,5 +99,5 @@ Then iterate:
 ## Notes
 
 - This repo is compatible with Obsidian. Open the repo root as a vault.
-- The lint/export scripts only scan `kb/` and `context/`.
+- The lint/export scripts only scan `kg/` and `context/`.
 - On GitHub, mark this as a Template Repository in repo settings if you want the “Use this template” button.

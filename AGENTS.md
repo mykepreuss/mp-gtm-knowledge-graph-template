@@ -18,26 +18,26 @@ Always work through the same pipeline:
 - Views live in `context/`.
 
 2) Use the workflow + template (interface)
-- Workflows live in `kb/workflows/`.
-- Templates live in `kb/templates/`.
+- Workflows live in `kg/workflows/`.
+- Templates live in `kg/templates/`.
 
 3) Label claims and check gates (validations)
-- Rubrics live in `kb/rubrics/`.
-- Claim labeling rules live in `kb/canon/claim-labels.md`.
+- Rubrics live in `kg/rubrics/`.
+- Claim labeling rules live in `kg/canon/claim-labels.md`.
 
 4) Upgrade loop (make next run better)
-- Reflection prompt lives in `kb/loops/reflection-prompt.md`.
+- Reflection prompt lives in `kg/loops/reflection-prompt.md`.
 
 ## Where to put changes
 
-- Durable truth: `kb/canon/`
-- Proof artifacts: `kb/sources/`
-- Entities (capabilities, terms, metrics): `kb/entities/`
+- Durable truth: `kg/canon/`
+- Proof artifacts: `kg/sources/`
+- Entities (capabilities, terms, metrics): `kg/entities/`
 - Routing: `context/`
-- Structure: `kb/templates/`
-- Task interface: `kb/workflows/`
-- Checks: `kb/rubrics/`
-- Upgrade loops: `kb/loops/`
+- Structure: `kg/templates/`
+- Task interface: `kg/workflows/`
+- Checks: `kg/rubrics/`
+- Upgrade loops: `kg/loops/`
 
 ## Tooling commands (run after edits)
 
@@ -51,9 +51,9 @@ Always work through the same pipeline:
 If the user does not specify a task, suggest starting with:
 
 - view: `context/landing-page-hero-v1.md`
-- workflow: `kb/workflows/landing-page-hero.md`
-- template: `kb/templates/landing-page-hero.md`
-- rubric: `kb/rubrics/gtm-asset-review.md`
+- workflow: `kg/workflows/landing-page-hero.md`
+- template: `kg/templates/landing-page-hero.md`
+- rubric: `kg/rubrics/gtm-asset-review.md`
 
 ## Handoff prompt for agent runners (if needed)
 

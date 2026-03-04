@@ -1,4 +1,4 @@
-export const GRAPH_INCLUDE_DIRS = ["kb", "context"];
+export const GRAPH_INCLUDE_DIRS = ["kg", "context"];
 
 export const REQUIRED_FIELDS = ["id", "type", "title", "owner", "status", "last_reviewed", "tags"];
 
