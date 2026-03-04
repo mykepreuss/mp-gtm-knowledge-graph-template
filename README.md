@@ -19,6 +19,7 @@ Everything in those folders is Markdown with YAML frontmatter and typed edges (`
 - Getting started: `docs/START-HERE.md`
 - First run prompt wrapper: `docs/FIRST-RUN-PROMPT-WRAPPER.md`
 - V1 intake flow (LLM interview): `docs/V1-INTAKE-FLOW.md`
+- Read with an agent (prompt pack): `docs/READ-WITH.md`
 - Agent handoff rules: `AGENTS.md`
 
 ## Quick start
