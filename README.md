@@ -4,6 +4,27 @@ A GitHub template repo for building a **versioned, AI-routable knowledge graph**
 
 This is meant to be runnable infrastructure, not a docs dump.
 
+## Start here (non-technical friendly)
+
+If you’re in GTM and you just want to get to a usable v1 fast:
+
+1) Use AI to generate your first canon:
+- `docs/V1-INTAKE-FLOW.md`
+2) Run your first asset draft using copy/paste prompts:
+- `docs/READ-WITH.md`
+3) If you don’t want to use the terminal:
+- `docs/NO-TERMINAL.md`
+
+Bonus: prebuilt context packs you can paste into an LLM:
+- `packs/README.md`
+
+## Copy/paste prompts (quick)
+
+- Setup interview: `docs/V1-INTAKE-FLOW.md`
+- First run wrapper: `docs/FIRST-RUN-PROMPT-WRAPPER.md`
+- “Read with…” prompt pack: `docs/READ-WITH.md`
+- Prebuilt context packs (no terminal): `packs/README.md`
+
 ## Repo model
 
 Two layers:
@@ -13,42 +34,6 @@ Two layers:
 
 Everything in those folders is Markdown with YAML frontmatter and typed edges (`links:`).
 
-## Spec
-
-- Essay/spec: `docs/you-dont-need-better-prompts-you-need-a-knowledge-graph.md`
-- Getting started: `docs/START-HERE.md`
-- First run prompt wrapper: `docs/FIRST-RUN-PROMPT-WRAPPER.md`
-- V1 intake flow (LLM interview): `docs/V1-INTAKE-FLOW.md`
-- Read with an agent (prompt pack): `docs/READ-WITH.md`
-- Agent handoff rules: `AGENTS.md`
-
-## Quick start
-
-1) Install Node (20+).
-2) Install deps:
-
-```bash
-npm ci
-```
-
-3) Run graph lint:
-
-```bash
-npm run lint:graph
-```
-
-4) Bundle one view into a single context pack for an AI run:
-
-```bash
-npm run bundle:view -- --view context/landing-page-section-v1.md --out dist/context-pack.md
-```
-
-5) Export graph JSON (nodes + edges):
-
-```bash
-npm run export:graph
-```
-
 ## What success looks like
 
 If this repo is set up correctly for your org:
@@ -56,6 +41,16 @@ If this repo is set up correctly for your org:
 - A new teammate can generate a decent GTM asset without a 30 minute briefing.
 - When something drifts, you can point to one file to upgrade (canon/view/template/rubric), not a long Slack thread.
 - “We don’t know” becomes `TBD`, not an invented claim.
+
+## Docs map
+
+- Getting started (terminal): `docs/START-HERE.md`
+- Getting started (no terminal): `docs/NO-TERMINAL.md`
+- Setup interview (FAST/STRICT): `docs/V1-INTAKE-FLOW.md`
+- Prompt pack (“read with an agent”): `docs/READ-WITH.md`
+- First-run wrapper (strict output contract): `docs/FIRST-RUN-PROMPT-WRAPPER.md`
+- Spec/essay: `docs/you-dont-need-better-prompts-you-need-a-knowledge-graph.md`
+- Agent handoff rules: `AGENTS.md`
 
 ## What to edit first (v1 build)
 
@@ -89,6 +84,16 @@ Then iterate:
 - `kg/rubrics/`: gates and scoring (checks)
 - `kg/loops/`: “correct twice, encode once” upgrade loops
 - `scripts/`: lint/export/bundling tools
+
+## Optional: tooling (for people who use the terminal)
+
+If you’re comfortable with a terminal, the scripts make this repo behave like infrastructure:
+
+```bash
+npm ci
+npm run lint:graph
+npm run bundle:view -- --view context/landing-page-hero-v1.md --out dist/context-pack.md
+```
 
 ## Commands
 

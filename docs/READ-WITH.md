@@ -23,7 +23,12 @@ Start the interview now. Ask at most 5 questions at a time. If I don’t know, I
 
 ## 2) First end-to-end run (landing page hero)
 
-Prereq: bundle a view so the context is frozen:
+Option A (no terminal): use a prebuilt pack
+
+- Open: `packs/landing-page-hero-context-pack.md`
+- Paste it into your LLM chat (or upload it), then use the prompt below.
+
+Option B (terminal): bundle a view so the context is frozen:
 
 ```bash
 npm ci
@@ -73,4 +78,3 @@ Return a patch plan with:
 
 - If your tool supports file uploads, attaching `dist/context-pack.md` is better than copy/paste.
 - If your tool supports citations, require file path + heading citations for any “Grounded” claim.
-
