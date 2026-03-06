@@ -1,6 +1,6 @@
-# Knowledge + Context Graph Template
+# GTM Knowledge Graph Template
 
-A GitHub template repo for building a **versioned, AI-routable knowledge graph** (truth) plus a **context graph** (routing, templates, workflows, rubrics, and upgrade loops).
+A GitHub template repo for building a **GTM Knowledge Graph**: versioned truth in `kg/` plus routing, templates, workflows, rubrics, and upgrade loops.
 
 This is meant to be runnable infrastructure, not a docs dump.
 
@@ -27,10 +27,10 @@ Bonus: prebuilt context packs you can paste into an LLM:
 
 ## Repo model
 
-Two layers:
+Two working layers:
 
 - Knowledge graph (durable truth): `kg/`
-- Context graph (routing/views): `context/`
+- Context routing layer (views): `context/`
 
 Everything in those folders is Markdown with YAML frontmatter and typed edges (`links:`).
 

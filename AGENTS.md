@@ -1,4 +1,4 @@
-# Agent instructions — Knowledge + Context Graph Template
+# Agent instructions — GTM Knowledge Graph Template
 
 This repo is meant to be handed to an agent. The agent’s job is to produce GTM output with low drift by following the graph contract, not by guessing.
 

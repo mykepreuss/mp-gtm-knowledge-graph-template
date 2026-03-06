@@ -29,9 +29,9 @@ links:
 
 # Knowledge graph entrypoint
 
-This repo is split into two layers:
+This repo has two working layers:
 
 - `kg/`: the knowledge graph (durable truth, evidence, definitions, governance)
-- `context/`: the context graph (views that route the right subset for a task)
+- `context/`: the context routing layer (views that route the right subset for a task)
 
 If something drifts, upgrade canon, not the draft.

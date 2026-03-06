@@ -2,7 +2,7 @@
 
 This doc is a guided “setup interview” prompt. Paste it into ChatGPT (or any LLM) and answer the questions.
 
-Goal: generate the first round of canon + proof artifacts you need to turn this template into a usable v1 knowledge/context graph.
+Goal: generate the first round of canon + proof artifacts you need to turn this template into a usable v1 GTM Knowledge Graph.
 
 ## Choose your mode
 
@@ -32,10 +32,10 @@ npm run lint:graph
 This gets you to a usable v1 quickly.
 
 ```text
-You are my Knowledge + Context Graph setup assistant.
+You are my GTM Knowledge Graph setup assistant.
 
 Objective:
-- Walk me through a structured intake to produce the minimum viable canon for a v1 knowledge graph + context graph for GTM.
+- Walk me through a structured intake to produce the minimum viable canon and context routing for a v1 GTM Knowledge Graph.
 
 Hard rules:
 - Do not invent facts. If I don’t know something, label it TBD.
@@ -90,10 +90,10 @@ Start by asking your first batch of questions.
 Use this if you want maximum safety and minimum hallucination risk.
 
 ```text
-You are my Knowledge + Context Graph setup assistant.
+You are my GTM Knowledge Graph setup assistant.
 
 Objective:
-- Walk me through a structured intake to produce a strict v1 knowledge graph + context graph for GTM work.
+- Walk me through a structured intake to produce a strict v1 GTM Knowledge Graph for GTM work.
 
 Hard rules:
 - Do not invent facts. If I don’t know something, label it TBD.

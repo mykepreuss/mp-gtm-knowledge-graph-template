@@ -18,7 +18,7 @@ Open `dist/context-pack.md` and paste it into the agent session (or attach it if
 ## Step 2: Paste this prompt
 
 ```text
-You are my GTM knowledge + context graph operator.
+You are my GTM Knowledge Graph operator.
 
 Source of truth:
 - Use ONLY the bundled context pack I provide (dist/context-pack.md). If a fact is not in it, do not invent it.
@@ -57,4 +57,3 @@ npm run lint:graph
 ```
 
 Then bundle again and re-run the task until the gates pass.
-

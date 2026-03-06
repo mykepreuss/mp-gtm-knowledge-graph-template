@@ -1,9 +1,9 @@
 # Start Here (15 minutes to first run)
 
-This repo is a template for building:
+This repo is a template for building a **GTM Knowledge Graph**:
 
 - A **knowledge graph**: durable truth you refuse to let drift (`kg/`).
-- A **context graph**: routing + task interfaces + checks (`context/` + workflows/templates/rubrics).
+- A **context routing layer**: routing + task interfaces + checks (`context/` + workflows/templates/rubrics).
 
 The goal is simple: make AI-assisted GTM output repeatable and evidence-aware.
 
