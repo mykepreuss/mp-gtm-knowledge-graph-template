@@ -1,62 +1,46 @@
-# Agent instructions — GTM Knowledge Graph Template
+# Agent instructions: GTM Knowledge Graph Template
 
-This repo is meant to be handed to an agent. The agent’s job is to produce GTM output with low drift by following the graph contract, not by guessing.
+Treat this repo as runnable infrastructure for source-grounded GTM work. Follow the user's explicit task and carry its authorization within scope. Read `docs/UPGRADE-HANDOFF.md` when continuing template maintenance; use the relevant existing output/handoff for organization work.
 
-## Non-negotiables
+## Match the work
 
-- Do not invent facts. If something is missing, label it `TBD` or `Hypothesis`.
-- Risky claims (pricing, security, privacy, guarantees): require current evidence or must be labeled `TBD`.
-- When making factual claims, cite the file path (and heading) from the graph.
-- Prefer small, reviewable edits. Upgrade the system (canon/views/templates/rubrics), not just the draft.
+Small edits and questions stay small. Preserve supplied meaning and voice unless asked to rewrite. For substantive work, select the relevant view, workflow, template, and rubric. Infer inputs from available records before asking up to three material questions. The agent maintains records and runs checks; do not ask the user to assemble a file list or fill in scores.
 
-## How to run work (the contract)
+For drafting, revising, or reviewing the organization's writing, use `.agents/skills/gtm-writing/SKILL.md`. It routes to this repository's approved voice, sources and examples. It does not install personal preferences or grant external-action authority.
 
-Always work through the same pipeline:
+## Discovery and authority
 
-1) Pick a view (routing)
-- A view freezes what context is allowed to speak for this task.
-- Views live in `context/`.
+Start with `kg/knowledge-graph.md` and the relevant catalog's when-to-open guidance. Read actual selected passages, not just index descriptions. Keep task context small:
 
-2) Use the workflow + template (interface)
-- Workflows live in `kg/workflows/`.
-- Templates live in `kg/templates/`.
+- `kg/canon/canon.md`: product, audience, positioning, voice, claim rules, proof and trust boundaries.
+- `context/context-pack.md`: views, the source seeds allowed to speak for a task.
+- `kg/workflows/index.md`: task contract and validations.
+- `kg/rubrics/index.md`: checks; return a fix list before revised output if a gate fails.
+- `kg/examples/index.md`, `kg/surfaces/index.md`, `kg/frameworks/index.md`: relevant approved references, channel constraints and supporting structures.
+- `kg/outputs/index.md`: prior work, review evidence and continuity.
 
-3) Label claims and check gates (validations)
-- Rubrics live in `kg/rubrics/`.
-- Claim labeling rules live in `kg/canon/claim-labels.md`.
+Apply `kg/schema/knowledge-graph-schema.md`. Separate source evidence, owner-approved guidance, proposals and history. Follow current approved pointers and explicit corrections. Status, a newer filename, view membership, publication or a model score does not confer approval. Recheck changing facts only when they materially affect the task. Placeholders are never facts. Label unsupported claims `TBD` or `Hypothesis` and preserve what would resolve them; do not turn those labels into permission to publish a claim.
 
-4) Upgrade loop (make next run better)
-- Reflection prompt lives in `kg/loops/reflection-prompt.md`.
+## Produce, review, and learn
 
-## Where to put changes
+Use the selected workflow's Inputs, Output contract, Validations, and Upgrade points. Check concrete meaning, reader value, source fidelity, and the organization's voice. Compare actual earlier copy and feedback when revising or deriving work. Intentional reuse is allowed when useful; no novelty quota or mandatory scoring.
 
-- Durable truth: `kg/canon/`
-- Proof artifacts: `kg/sources/`
-- Entities (capabilities, terms, metrics): `kg/entities/`
-- Routing: `context/`
-- Structure: `kg/templates/`
-- Task interface: `kg/workflows/`
-- Checks: `kg/rubrics/`
-- Upgrade loops: `kg/loops/`
+For source-derived outputs, run `npm run prior:outputs -- --source NODE --surface SURFACE` and inspect relevant candidates. Empty or incomplete records are coverage limits, not proof of no prior use. Record assessment, owner review, and publication separately using `kg/templates/output-artifact.md`. Preserve rejected versions, exact feedback and meaningful failures; do not copy approval into substantive revisions. Small edits need no new receipt.
 
-## Tooling commands (run after edits)
+Upgrade the relevant rule only for an explicit durable correction, material failure, or repeated pattern, within existing authority. Use `kg/loops/reflection-prompt.md`; a clean run can finish without an upgrade. Keep dated evidence in the existing output/handoff and reusable guidance at the point of use. At a substantial completion or interruption, record changed files, verification, actual state and next action in that same handoff.
 
-- Install: `npm ci`
-- Lint graph: `npm run lint:graph`
-- Bundle a view: `npm run bundle:view -- --view context/<view>.md --out dist/context-pack.md`
-- Export graph JSON: `npm run export:graph`
+Drafting does not authorize sending, publishing, scheduling, external export of private content, or changes to live systems. Continue already-authorized actions without repeated confirmation. A workflow or skill file does not activate a schedule. Preserve retired workflows as history; do not execute a stale invocation.
 
-## Default “first task” suggestion
+## Placement and verification
 
-If the user does not specify a task, suggest starting with:
+Durable facts: `kg/canon/`; proof: `kg/sources/`; entities: `kg/entities/`; routing: `context/`; contracts: `kg/workflows/`; structures: `kg/templates/`; checks: `kg/rubrics/`; generated work: `kg/outputs/`; approved references: `kg/examples/`.
 
-- view: `context/landing-page-hero-v1.md`
-- workflow: `kg/workflows/landing-page-hero.md`
-- template: `kg/templates/landing-page-hero.md`
-- rubric: `kg/rubrics/gtm-asset-review.md`
+- Install dependencies: `npm ci`.
+- Validate nodes/links: `npm run lint:graph`.
+- After changing tooling, run fixtures: `npm test`.
+- After changing bundled sources/contracts, regenerate: `npm run packs:build`.
+- Completion check: `npm run check`.
+- Bundle a task: `npm run bundle:view -- --view context/landing-page-hero-v1.md --out dist/context-pack.md`.
+- Export/report: `npm run export:graph`, `npm run report:graph`.
 
-## Handoff prompt for agent runners (if needed)
-
-If your environment requires a single instruction block, use:
-
-- `docs/FIRST-RUN-PROMPT-WRAPPER.md`
+Inspect advisory catalog warnings and repair relevant omissions. Do not describe graph consistency or CI configuration as verified truth, owner acceptance, live behavior, or enforced merge protection.

@@ -4,7 +4,7 @@ type: schema
 title: Relation (Edge) Types
 owner: repo
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - schema
   - edges
@@ -18,7 +18,7 @@ links:
 
 Edges live in node frontmatter under `links:`.
 
-Recommended set for v1:
+Relations must be uppercase. These names are recommended; new uppercase names are accepted without a tooling schema migration:
 
 - `DEPENDS_ON`: hard dependency for correctness
 - `EVIDENCED_BY`: claim supported by a proof artifact

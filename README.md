@@ -4,6 +4,14 @@ A GitHub template repo for building a **GTM Knowledge Graph**: versioned truth i
 
 This is meant to be runnable infrastructure, not a docs dump.
 
+## Agent-owned operation
+
+Describe the requested work normally. `AGENTS.md` and the portable `.agents/skills/gtm-writing/SKILL.md` select relevant catalogs, approved context, actual sources, examples and workflow checks. Small edits stay small. You provide direction and feedback; the agent handles discovery, record maintenance and verification.
+
+Read `kg/schema/knowledge-graph-schema.md` for authority, conditional freshness and structural contracts. Source evidence, approved guidance, proposals and history have different roles. Status, publication and model scores do not confer approval. Follow current approved pointers and preserve exact scoped corrections. Placeholder business canon and sample evidence remain `status: template` until replaced and reviewed.
+
+For template maintenance continuity, read `docs/UPGRADE-HANDOFF.md`.
+
 ## Start here (non-technical friendly)
 
 If you’re in GTM and you just want to get to a usable v1 fast:
@@ -32,7 +40,7 @@ Two working layers:
 - Knowledge graph (durable truth): `kg/`
 - Context routing layer (views): `context/`
 
-Everything in those folders is Markdown with YAML frontmatter and typed edges (`links:`).
+Routable nodes use Markdown with YAML frontmatter and typed edges (`links:`). Plain support documents may remain without frontmatter.
 
 ## What success looks like
 
@@ -82,7 +90,9 @@ Then iterate:
 - `kg/templates/`: generation interfaces (structure)
 - `kg/workflows/`: task interfaces (view + template + validations)
 - `kg/rubrics/`: gates and scoring (checks)
-- `kg/loops/`: “correct twice, encode once” upgrade loops
+- `kg/loops/`: evidence-triggered, scoped correction handling
+- `kg/examples/`: source-linked approved writing references (empty until your organization adds them)
+- `kg/surfaces/`: channel constraints
 - `scripts/`: lint/export/bundling tools
 
 ## Optional: tooling (for people who use the terminal)
@@ -100,7 +110,17 @@ npm run bundle:view -- --view context/landing-page-hero-v1.md --out dist/context
 - Lint graph: `npm run lint:graph`
 - Export graph JSON: `npm run export:graph`
 - Graph health report: `npm run report:graph`
-- Bundle a view: `npm run bundle:view -- --view <path> --out dist/context-pack.md`
+- Bundle a complete task: `npm run bundle:view -- --view <path> --out dist/context-pack.md`
+- Find related output versions: `npm run prior:outputs -- --source <node> --surface <surface>`
+- Run positive/negative fixtures: `npm test`
+- Regenerate/check all task packs: `npm run packs:build`, `npm run packs:check`
+- Completion check: `npm run check`
+
+## Verification limits
+
+The agent runs graph checks after node/link edits and fixtures after tooling changes, then regenerates affected packs. CI runs the same completion check. Catalog coverage warnings are advisory and follow nested indexes. Validated receipts keep assessment, owner review and publication independent; they do not verify the evidence itself. Numeric scoring is optional. A successful run can finish without a system upgrade.
+
+Graph consistency, fixture success and synchronized source snapshots do not establish factual truth, approval, improved writing, or live outcomes. Required-check branch protection is a separate setting, not established by this repository's CI file.
 
 ## Notes
 

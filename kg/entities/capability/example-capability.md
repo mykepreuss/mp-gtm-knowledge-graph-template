@@ -1,9 +1,9 @@
 ---
 id: kcg:entity:capability:example-capability
 type: entity
-title: Capability: Example Capability
+title: "Capability: Example Capability"
 owner: product
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - entity

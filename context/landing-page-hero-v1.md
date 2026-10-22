@@ -1,21 +1,35 @@
 ---
 id: kcg:view:landing-page-hero:v1
 type: view
-title: View: Landing page hero + problem section (v1)
+title: "View: Landing page hero + problem section (v1)"
 owner: gtm
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - view
   - routing
   - gtm
 task: Write a landing page hero and problem section that signals ICP fit, names the enemy, and stays proof-aware.
+seed_ids:
+  - "kcg:canon:icp"
+  - "kcg:canon:product-truth"
+  - "kcg:canon:positioning"
+  - "kcg:canon:nomenclature"
+  - "kcg:canon:trust-boundaries"
+  - "kcg:canon:voice"
+  - "kcg:canon:proof-map"
+  - "kcg:canon:claim-labels"
+  - "kcg:surface:website"
 seed_nodes:
+  - "[[kg/canon/icp]]"
   - "[[kg/canon/product-truth]]"
   - "[[kg/canon/positioning]]"
   - "[[kg/canon/nomenclature]]"
   - "[[kg/canon/trust-boundaries]]"
   - "[[kg/canon/voice]]"
+  - "[[kg/canon/proof-map]]"
+  - "[[kg/canon/claim-labels]]"
+  - "[[kg/surfaces/website]]"
 links:
   - rel: DEPENDS_ON
     href: "[[kg/canon/product-truth]]"

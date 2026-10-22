@@ -4,7 +4,7 @@ type: index
 title: Entities (Index)
 owner: repo
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - index
   - entity
@@ -25,3 +25,4 @@ Capture the smallest set of entities that prevents repeat re-explaining:
 - terms and definitions
 - metrics
 
+Open the specific capability, term or metric needed for a claim. Placeholder examples remain scaffolds. Check changing implementation and preserve exact metric definitions, units, periods and attribution.

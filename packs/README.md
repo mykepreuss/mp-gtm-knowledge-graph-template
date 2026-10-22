@@ -1,23 +1,19 @@
-# Prebuilt context packs (copy/paste friendly)
+# Complete task packs
 
-These files are pre-generated “bundles” of a view + its seed nodes.
+These generated files let a standalone chat receive the selected view, its seeds, direct proof references, workflow, template, rubric, and shared authority/output contracts.
 
-They exist so a non-technical user can start immediately from GitHub without running any scripts.
+- `landing-page-hero-context-pack.md`: hero and problem section.
+- `landing-page-section-context-pack.md`: a specific website section.
+- `category-pov-context-pack.md`: category narrative.
+- `inbound-outline-context-pack.md`: article outline.
 
-## How to use
+Paste or upload one whole pack, then use `docs/FIRST-RUN-PROMPT-WRAPPER.md`. Packs ship with template placeholders, not business facts or approved examples. Each manifest hashes the included source snapshot. Other navigation links do not imply that their contents are included.
 
-1) Pick the pack that matches your task.
-2) Paste the entire file into your LLM chat (or upload it).
-3) Use the prompt from:
-   - `docs/FIRST-RUN-PROMPT-WRAPPER.md` (strict output contract), or
-   - `docs/READ-WITH.md` (shorter prompts).
-
-## Important
-
-- These packs are examples. Once you edit your canon (`kg/canon/*`), regenerate a fresh pack using:
+After editing bundled material, the agent regenerates and checks packs:
 
 ```bash
-npm ci
-npm run bundle:view -- --view context/<view>.md --out dist/context-pack.md
+npm run packs:build
+npm run packs:check
 ```
 
+CI checks that committed packs match their current source files. This prevents unnoticed stale bundles; it does not establish factual freshness. Do not paste private sources into another service without applicable permission.

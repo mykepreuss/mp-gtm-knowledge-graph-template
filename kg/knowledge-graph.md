@@ -4,7 +4,7 @@ type: index
 title: Knowledge Graph (Entrypoint)
 owner: repo
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - index
   - knowledge-graph
@@ -25,13 +25,27 @@ links:
     href: "[[kg/rubrics/index]]"
   - rel: LINKS_TO
     href: "[[context/context-pack]]"
+  - rel: LINKS_TO
+    href: "[[kg/examples/index]]"
+  - rel: LINKS_TO
+    href: "[[kg/surfaces/index]]"
+  - rel: LINKS_TO
+    href: "[[kg/outputs/index]]"
+  - rel: LINKS_TO
+    href: "[[kg/entities/index]]"
 ---
 
 # Knowledge graph entrypoint
 
-This repo has two working layers:
+Choose the catalog for the task, then read relevant actual passages. `kg/` holds facts, evidence, contracts and history; `context/` supplies task views. Small edits do not need a full workflow.
 
-- `kg/`: the knowledge graph (durable truth, evidence, definitions, governance)
-- `context/`: the context routing layer (views that route the right subset for a task)
+- [[kg/schema/knowledge-graph-schema]]: structure, authority, promotion, freshness and verification limits.
+- [[kg/canon/canon]]: organization facts, proof, voice and terminology.
+- [[context/context-pack]] and [[kg/workflows/index]]: routing and substantive task contracts.
+- [[kg/templates/index]] and [[kg/rubrics/index]]: output scaffolds and checks.
+- [[kg/entities/index]] and [[kg/frameworks/index]]: capability definitions and optional reasoning structures.
+- [[kg/examples/index]] and [[kg/surfaces/index]]: approved references and channel constraints.
+- [[kg/outputs/index]]: prior versions, exact feedback, publication evidence and continuity.
+- [[kg/loops/index]]: scoped correction handling.
 
-If something drifts, upgrade canon, not the draft.
+Follow current approved pointers and explicit corrections. Catalog discovery does not promote proposals. Update the relevant authoritative rule only when evidence and authorization justify it; clean runs need no upgrade.

@@ -1,7 +1,7 @@
 ---
 id: kcg:template:inbound-outline:v1
 type: template
-title: Template: Inbound outline (v1)
+title: "Template: Inbound outline (v1)"
 owner: gtm
 status: active
 last_reviewed: 2026-03-04

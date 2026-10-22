@@ -4,7 +4,7 @@ type: template
 title: Reflection Prompt (GTM Context Engineer)
 owner: gtm
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - template
   - loop
@@ -19,37 +19,20 @@ links:
     href: "[[context/context-pack]]"
 ---
 
-# Reflection prompt: GTM context engineer
+# Reflection prompt: scoped graph upgrades
 
-Use this after a run to turn feedback into graph upgrades.
-
-## Prompt
+Use when an explicit durable correction, material failure, or repeated pattern justifies a system upgrade. Ordinary successful work may finish with no change. Repair the current output; inspect the actual source, earlier versions and feedback before deciding whether a reusable rule is needed.
 
 ```text
-You are my GTM context engineer.
+Review the task brief, selected view/workflow, actual output, and exact owner edits or observed failure.
 
-Inputs:
-- task brief
-- view used (seed nodes + constraints)
-- output produced
-- my edits and notes
+Return only what the evidence supports:
+- What failed, its source, and whether it is a factual/meaning problem, a durable preference, or an optional edit.
+- The smallest useful correction and its scope. Put task procedure in its workflow/skill, cross-task truth in canon, routing changes in the relevant view/catalog, and dated incidents in the existing output/handoff.
+- For an authorized durable upgrade: affected file, exact patch, source/approval evidence and a useful example or non-example when one exists. Otherwise retain the proposal in the current record.
+- The check that verifies the patch and the later ordinary-task behavior that would establish learning.
 
-Return:
-1) Knowledge Graph patches:
-   - missing nodes or missing fields
-   - claims that need IDs, evidence, or caveats
-2) View patches:
-   - which nodes to include/exclude next time
-   - constraints to tighten
-   - output format changes that reduce drift
-3) Voice patches:
-   - phrases or structures that sounded synthetic
-   - add 1 example + 1 non-example to the voice canon
-4) Minimal patch plan:
-   - file list
-   - exact text to add
-   - commit message
-
-Optimize for: eliminate this failure mode forever.
+Preserve explicit exclusions and permission boundaries. Do not promote one-off wording into a universal ban or infer approval from scores, status, silence, or publication. Keep canonical examples linked, not copied. Do not require a patch, commit, new review queue, or new rule after every run.
 ```
 
+Run the documented graph/tool checks after edits and maintain the same handoff. Structural success does not establish improved writing or reduced review effort.

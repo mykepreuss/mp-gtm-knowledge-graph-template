@@ -1,7 +1,7 @@
 ---
 id: kcg:template:category-pov-doc:v1
 type: template
-title: Template: Category POV doc (v1)
+title: "Template: Category POV doc (v1)"
 owner: gtm
 status: active
 last_reviewed: 2026-03-04

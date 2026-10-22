@@ -5,7 +5,10 @@ import process from "node:process";
 import { GRAPH_INCLUDE_DIRS, REQUIRED_FIELDS } from "./graph-config.mjs";
 import { isExternalHref, parseFrontmatter, resolveHref, walkMarkdownFiles } from "./graph-utils.mjs";
 
+import { requireValidGraph } from "./graph-validation.mjs";
+
 const rootDir = process.cwd();
+try { requireValidGraph(rootDir); } catch (error) { console.error(error.message); process.exit(1); }
 const files = walkMarkdownFiles({ rootDir, includeDirs: GRAPH_INCLUDE_DIRS });
 
 const nodes = [];
@@ -20,7 +23,7 @@ for (const file of files) {
   if (!parsed) continue;
 
   const data = parsed.data;
-  nodes.push({ file, ...data });
+  nodes.push({ ...data, file });
 
   for (const key of REQUIRED_FIELDS) {
     if (!data[key]) missingRequired[key] += 1;
@@ -183,7 +186,7 @@ for (const [type, count] of sortEntries(nodesWithoutLinks)) {
   console.log(`- ${type}: ${count}`);
 }
 console.log("");
-console.log("## last_reviewed Age Buckets (days)");
+console.log("## last_reviewed Age Buckets (descriptive, not a freshness verdict)");
 console.log("");
 for (const key of ["0-30", "31-90", "91-180", "181+", "missing"]) {
   console.log(`- ${key}: ${reviewAgeBuckets[key]}`);

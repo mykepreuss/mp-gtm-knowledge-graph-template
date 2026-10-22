@@ -1,10 +1,10 @@
 ---
 id: kcg:view:landing-page-section:v1
 type: view
-title: View: Landing page section (v1)
+title: "View: Landing page section (v1)"
 owner: gtm
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - view
   - routing
@@ -17,6 +17,9 @@ seed_ids:
   - "kcg:canon:positioning"
   - "kcg:canon:proof-map"
   - "kcg:canon:voice"
+  - "kcg:canon:trust-boundaries"
+  - "kcg:canon:claim-labels"
+  - "kcg:surface:website"
 seed_nodes:
   - "[[kg/canon/product-truth]]"
   - "[[kg/canon/icp]]"
@@ -24,6 +27,9 @@ seed_nodes:
   - "[[kg/canon/positioning]]"
   - "[[kg/canon/proof-map]]"
   - "[[kg/canon/voice]]"
+  - "[[kg/canon/trust-boundaries]]"
+  - "[[kg/canon/claim-labels]]"
+  - "[[kg/surfaces/website]]"
 links:
   - rel: DEPENDS_ON
     href: "[[kg/canon/product-truth]]"

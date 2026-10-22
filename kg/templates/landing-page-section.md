@@ -1,7 +1,7 @@
 ---
 id: kcg:template:landing-page-section:v1
 type: template
-title: Template: Landing page section (v1)
+title: "Template: Landing page section (v1)"
 owner: gtm
 status: active
 last_reviewed: 2026-03-04

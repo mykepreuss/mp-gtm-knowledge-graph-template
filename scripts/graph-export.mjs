@@ -5,7 +5,10 @@ import process from "node:process";
 import { GRAPH_INCLUDE_DIRS } from "./graph-config.mjs";
 import { isExternalHref, parseFrontmatter, resolveHref, walkMarkdownFiles } from "./graph-utils.mjs";
 
+import { requireValidGraph } from "./graph-validation.mjs";
+
 const rootDir = process.cwd();
+try { requireValidGraph(rootDir); } catch (error) { console.error(error.message); process.exit(1); }
 const rawArgs = process.argv.slice(2);
 const args = new Set(rawArgs);
 const pretty = args.has("--pretty");
@@ -35,7 +38,7 @@ for (const file of files) {
   const content = fs.readFileSync(abs, "utf8");
   const parsed = parseFrontmatter(content);
   if (!parsed) continue;
-  const node = { file, ...parsed.data };
+  const node = { ...parsed.data, file };
   nodes.push(node);
   if (node.id) fileToId.set(file, node.id);
 }

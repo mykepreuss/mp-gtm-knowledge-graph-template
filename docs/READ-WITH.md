@@ -1,80 +1,30 @@
-# Read with an agent (copy/paste prompts)
+# Read with an agent
 
-This repo is meant to be used with LLM tools. These prompts make it easy to:
+Describe the work normally to a repository-connected agent. `AGENTS.md` selects context, and `.agents/skills/gtm-writing/SKILL.md` routes organization writing. Simple questions and small edits do not require formal workflows.
 
-- bootstrap v1 canon from your answers
-- run one workflow end-to-end
-- convert feedback into graph upgrades (canon/view/template/rubric)
-
-## 1) V1 setup interview (recommended first)
-
-Use: `docs/V1-INTAKE-FLOW.md`
-
-Prompt (paste into ChatGPT/Claude/etc.):
+## Setup
 
 ```text
-I’m setting up a Knowledge + Context Graph repo.
-
-Open and follow this doc exactly:
-- docs/V1-INTAKE-FLOW.md
-
-Start the interview now. Ask at most 5 questions at a time. If I don’t know, I will answer TBD.
+Help me set up this GTM knowledge graph using docs/V1-INTAKE-FLOW.md. Inspect relevant available sources first. Ask at most three material questions at a time. Keep unknowns as TBD, proposed interpretations separate from approval, and source-backed claims bounded by their evidence.
 ```
 
-## 2) First end-to-end run (landing page hero)
+## First asset
 
-Option A (no terminal): use a prebuilt pack
+```text
+Use this repository to draft a landing page hero and problem section for our documented audience. Follow AGENTS.md, select the landing-page-hero view/workflow, and use the actual product and evidence records. Preserve relevant prior feedback. Return complete copy with concise source limits and actual check results. Do not publish it.
+```
 
-- Open: `packs/landing-page-hero-context-pack.md`
-- Paste it into your LLM chat (or upload it), then use the prompt below.
-
-Option B (terminal): bundle a view so the context is frozen:
+For a chat without repository access, attach a fresh complete pack and use `docs/FIRST-RUN-PROMPT-WRAPPER.md`. Prebuilt packs in `packs/` contain scaffolds. Regenerate from your own reviewed sources after setup:
 
 ```bash
 npm ci
 npm run bundle:view -- --view context/landing-page-hero-v1.md --out dist/context-pack.md
 ```
 
-Then use:
-
-- `docs/FIRST-RUN-PROMPT-WRAPPER.md`
-
-Quick prompt (paste into your LLM, then attach/paste `dist/context-pack.md`):
+## Learn from feedback
 
 ```text
-I will paste a bundled context pack next (dist/context-pack.md).
-
-After I paste it:
-- Use ONLY that context pack as source of truth.
-- Follow the workflow: kg/workflows/landing-page-hero.md
-- Follow the template: kg/templates/landing-page-hero.md
-- Validate with: kg/rubrics/gtm-asset-review.md
-- Output claims with labels: Grounded | Hypothesis | TBD
-- Then propose the smallest graph upgrades to prevent the same issues next time.
+Review this output, my edits, and the exact earlier feedback. Use kg/loops/reflection-prompt.md. Correct the output and identify whether an authorized durable rule change is justified. If so, apply the smallest scoped change at its point of use and record its evidence in the existing output/handoff. A clean result or one-off preference needs no system upgrade.
 ```
 
-## 3) Upgrade loop (turn edits into patches)
-
-When you have an output + edits, paste this:
-
-```text
-You are my GTM context engineer.
-
-Given:
-- the task brief
-- the view used (context/*.md)
-- the output produced
-- my edits and notes
-
-Use: kg/loops/reflection-prompt.md
-
-Return a patch plan with:
-- which file(s) to change (kg/canon, context, kg/templates, kg/rubrics)
-- exact text to add
-- and the smallest change that would prevent the failure next time.
-```
-
-## Notes
-
-- If your tool supports file uploads, attaching `dist/context-pack.md` is better than copy/paste.
-- If your tool supports citations, require file path + heading citations for any “Grounded” claim.
+A standalone chat can propose file patches but cannot claim they were applied or tested without tool evidence. Preserve source permission and external-action boundaries.

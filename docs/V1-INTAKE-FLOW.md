@@ -21,10 +21,11 @@ Pick one:
 1) Open this repo’s `kg/canon/*` files so you can paste answers back into the repo.
 2) Paste the chosen prompt below into ChatGPT.
 3) Answer the questions. When you do not know, say `TBD`.
-4) At the end, apply the generated “Patch pack” into this repo and run:
+4) Review the proposed facts and rules. Have your connected agent apply the authorized patch pack, record source/approval scope, regenerate packs, and run:
 
 ```bash
-npm run lint:graph
+npm run packs:build
+npm run check
 ```
 
 ## FAST v1 prompt (paste into ChatGPT)
@@ -38,12 +39,15 @@ Objective:
 - Walk me through a structured intake to produce the minimum viable canon and context routing for a v1 GTM Knowledge Graph.
 
 Hard rules:
-- Do not invent facts. If I don’t know something, label it TBD.
+- Inspect relevant supplied or accessible sources before asking. Do not invent facts; label unknowns TBD.
+- Preserve source, observation date, scope and verification limits. A source assertion is not independently verified fact.
+- Proposed canon remains proposed until my direction authorizes its adoption. Record that decision and current pointer within its actual scope; do not infer approval from filenames or status.
+- Follow kg/schema/knowledge-graph-schema.md. A review date alone does not establish freshness.
 - Prefer concrete nouns and mechanisms over adjectives.
 - When you propose text that should become canon, keep it short and reviewable.
 
 Process rules:
-- Ask questions in small batches (max 5 questions at a time).
+- Ask questions in small batches (max 3 material questions at a time).
 - After each batch, wait for my answers before continuing.
 - If my answer is vague, ask one follow-up question to make it specific.
 - If I answer “skip”, continue and fill that section with TBD markers.
@@ -64,8 +68,8 @@ Optional if time:
 - kg/canon/claim-labels.md
 
 Also return:
-- 1–3 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
-- 1–3 new kg/entities/* nodes I should create (capabilities or terms) (each as a full Markdown file with frontmatter)
+- 1 to 3 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
+- 1 to 3 new kg/entities/* nodes I should create (capabilities or terms) (each as a full Markdown file with frontmatter)
 - A first-run recommendation:
   - which view (context/*.md) to start with
   - which workflow + template + rubric pair to use
@@ -96,14 +100,17 @@ Objective:
 - Walk me through a structured intake to produce a strict v1 GTM Knowledge Graph for GTM work.
 
 Hard rules:
-- Do not invent facts. If I don’t know something, label it TBD.
+- Inspect relevant supplied or accessible sources before asking. Do not invent facts; label unknowns TBD.
+- Preserve source, observation date, scope and verification limits. A source assertion is not independently verified fact.
+- Proposed canon remains proposed until my direction authorizes its adoption. Record that decision and current pointer within its actual scope; do not infer approval from filenames or status.
+- Follow kg/schema/knowledge-graph-schema.md. A review date alone does not establish freshness.
 - Every key claim must be labeled: Grounded | Hypothesis | TBD.
 - Grounded claims REQUIRE an inspectable proof artifact. If no artifact exists, the claim cannot be Grounded.
 - Pricing/privacy/security/retention/compliance/guarantee claims REQUIRE a current source artifact or must be labeled TBD.
 - Prefer mechanisms, boundaries, and proof over adjectives.
 
 Process rules:
-- Ask questions in small batches (max 5 questions at a time).
+- Ask questions in small batches (max 3 material questions at a time).
 - After each batch, wait for my answers before continuing.
 - If I answer with a claim, ask: “What proof artifact backs this?” and collect it.
 - If I answer “skip”, continue and fill that section with TBD markers.
@@ -122,9 +129,9 @@ Return a “Patch pack” with updated content for these files (use the same hea
 9) kg/canon/proof-map.md
 
 Also return:
-- 2–6 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
+- 2 to 6 new kg/sources/* nodes I should create (each as a full Markdown file with frontmatter)
   - include “Last verified” dates for anything that drifts
-- 2–6 new kg/entities/* nodes I should create (capabilities, terms, struggling moments) (each as a full Markdown file with frontmatter)
+- 2 to 6 new kg/entities/* nodes I should create (capabilities, terms, struggling moments) (each as a full Markdown file with frontmatter)
 - View upgrade plan:
   - which context/*.md view to start with
   - which seed nodes to add/remove after the first run (and why)

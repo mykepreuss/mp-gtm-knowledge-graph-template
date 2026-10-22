@@ -1,3 +1,5 @@
+> Historical design essay. For current operating rules, use `AGENTS.md` and `kg/schema/knowledge-graph-schema.md`. Examples and older procedural language below are not current task authority.
+
 ---
 id: mp:writing:gtm-knowledge-graph
 type: writing
