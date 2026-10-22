@@ -3,12 +3,13 @@ id: kcg:canon:icp
 type: canon
 title: ICP
 owner: gtm
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon
   - icp
   - segmentation
+links: []
 ---
 
 # ICP

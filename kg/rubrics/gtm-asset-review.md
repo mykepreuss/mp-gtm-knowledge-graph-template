@@ -1,10 +1,10 @@
 ---
 id: kcg:rubric:gtm-asset-review:v1
 type: rubric
-title: Rubric: GTM Asset Review (v1)
+title: "Rubric: GTM Asset Review (v1)"
 owner: gtm
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - rubric
   - gtm
@@ -34,3 +34,7 @@ links:
 - benefits without mechanism
 - vague enemy
 
+
+## Editorial decision
+
+Check concrete meaning, value to this reader, source fidelity/permission and organization voice. Preserve exact metric definitions, units, periods, attribution and evidence limits. A template placeholder or plausible advice is not a supported claim or owner viewpoint. Treat factual and meaning defects separately from optional style preferences. If a gate fails, return the fix list first, then the revised draft. Record ready, revise, hold, or discard with actual findings; do not invent a score, audience reaction, or owner approval. Publication and business outcomes need separate evidence.

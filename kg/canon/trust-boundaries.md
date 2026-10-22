@@ -3,7 +3,7 @@ id: kcg:canon:trust-boundaries
 type: canon
 title: Trust Boundaries (Privacy, Security, Guarantees)
 owner: legal
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon

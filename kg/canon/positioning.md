@@ -3,11 +3,12 @@ id: kcg:canon:positioning
 type: canon
 title: Positioning
 owner: pmm
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon
   - positioning
+links: []
 ---
 
 # Positioning

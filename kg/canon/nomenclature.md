@@ -3,12 +3,13 @@ id: kcg:canon:nomenclature
 type: canon
 title: Nomenclature (Preferred Terms)
 owner: gtm
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon
   - terms
   - nomenclature
+links: []
 ---
 
 # Nomenclature

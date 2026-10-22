@@ -9,6 +9,14 @@
     "lint:graph": "node scripts/graph-lint.mjs",
     "export:graph": "node scripts/graph-export.mjs --pretty --out dist/graph.json",
     "report:graph": "node scripts/graph-health-report.mjs",
-    "bundle:view": "node scripts/context-bundle.mjs"
+    "bundle:view": "node scripts/context-bundle.mjs",
+    "test": "node --test scripts/tests/*.test.mjs",
+    "check": "npm run lint:graph && npm test && npm run packs:check",
+    "prior:outputs": "node scripts/prior-outputs.mjs",
+    "packs:build": "node scripts/context-packs.mjs",
+    "packs:check": "node scripts/context-packs.mjs --check"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
   }
 }

@@ -3,7 +3,7 @@ id: kcg:canon:product-truth
 type: canon
 title: Product Truth
 owner: product
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon

@@ -1,0 +1,17 @@
+{
+  "source": "MP-KG",
+  "base_commit": "9f44aa9a1fc381a10b4fd0ccb04bf1dd5d8fa850",
+  "captured_on": "2026-10-22",
+  "scope": "Current working files, including local changes. Hashes bind the adaptation reference; no source content or private records are copied into this manifest.",
+  "files": {
+    "graph/conventions.md": "f211a731c0e67d94873a581cbba42496de6efec221bb438c3493e6d83cf55f6c",
+    ".agents/skills/mp-writing/SKILL.md": "b4fb3ae5ced122168d7e64639364fb189c78817b8a156bd8a8aa8848f54d22a7",
+    "templates/output-derivative.md": "bb295f0a5d9c7e9be71032f5cf9f7b453deb7392e06aa562b6feafe4ac064d89",
+    "templates/example-writing.md": "ee47809b4e7a20d328d3ae6b67b6c4335453a961291205fee6eacad6313baa00",
+    "examples/index.md": "357ee5c6302a02057dbc9a20a6694f578f6d927ce776fff1960d4f3458b20158",
+    "workflows/linkedin/editorial-process.md": "a952fb28674a4d2a0230facaa620b619dbee294da9f05fb83068b769610c9223",
+    "workflows/derive/linkedin-from-longform.md": "f2f44eb4e3197d3fe93f49edd203f8f0c22b468d77c5b1f0a651690ec0487b7c",
+    "scripts/prior-outputs.rb": "d3e805ba32dc691dff55194e1f6c085b504fa0982e9960b62a464fb3ca3a5e08",
+    "scripts/lib/output-receipt.rb": "5c71d649b7aaa0a6046a32b964e34b21d92b8d141709a3a36e1ad3759241423f"
+  }
+}

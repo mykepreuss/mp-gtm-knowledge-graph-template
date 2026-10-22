@@ -3,12 +3,13 @@ id: kcg:canon:category-pov
 type: canon
 title: Category POV
 owner: gtm
-status: active
+status: template
 last_reviewed: 2026-03-04
 tags:
   - canon
   - category
   - narrative
+links: []
 ---
 
 # Category POV

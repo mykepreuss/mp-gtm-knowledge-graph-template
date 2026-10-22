@@ -1,13 +1,14 @@
 ---
 id: kcg:template:base-node
 type: template
-title: Template: Base node
+title: "Template: Base node"
 owner: repo
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - template
   - node
+links: []
 ---
 
 # Base node template
@@ -17,16 +18,14 @@ Copy, then replace placeholders.
 ```yaml
 ---
 id: {{namespace}}:{{type}}:{{slug}}
-type: canon|entity|source|view|workflow|rubric|template|index|schema
+type: canon|entity|source|view|workflow|rubric|template|index|schema|example|surface
 title: {{Human title}}
 owner: {{person or function}}
 status: active|draft|planned|historical|template|archived
 last_reviewed: YYYY-MM-DD
 tags:
   - {{tag}}
-links:
-  # - rel: DEPENDS_ON
-  #   href: "[[kg/canon/product-truth]]"
+links: [] # Replace with typed edge mappings when needed
 ---
 ```
 

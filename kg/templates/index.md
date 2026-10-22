@@ -4,7 +4,7 @@ type: index
 title: Templates (Index)
 owner: repo
 status: active
-last_reviewed: 2026-03-04
+last_reviewed: 2026-10-22
 tags:
   - index
   - template
@@ -21,6 +21,8 @@ links:
     href: "[[kg/templates/inbound-outline]]"
   - rel: LINKS_TO
     href: "[[kg/templates/output-artifact]]"
+  - rel: LINKS_TO
+    href: "[[kg/templates/example-writing]]"
 ---
 
 # Templates
@@ -31,3 +33,5 @@ links:
 - `kg/templates/landing-page-section.md`
 - `kg/templates/inbound-outline.md`
 - `kg/templates/output-artifact.md`
+
+Open the scaffold matching the selected workflow. Use [[kg/templates/output-artifact]] for substantive retained output and [[kg/templates/example-writing]] only when recording an actually approved reference. Scaffolds and placeholders are not facts or approved examples.

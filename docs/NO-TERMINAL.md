@@ -1,72 +1,21 @@
-# No-terminal setup (recommended for GTM teams)
+# No-terminal setup
 
-You can use this repo without installing Node, Git, or Obsidian.
+Use a repository-connected agent where available. It can select files, apply authorized local changes, run checks, and regenerate packs for you. You provide business direction and feedback; the agent maintains the graph records.
 
-Use GitHub’s UI to edit Markdown files and use an LLM to generate the first version of your canon.
+## Create and fill your copy
 
-## 1) Create your copy of the repo
+Use the repository template or ZIP. Follow `docs/V1-INTAKE-FLOW.md` to replace placeholder canon with your source-backed facts and documented owner decisions. Add actual proof under `kg/sources/`, retaining dates, provenance and limits. A placeholder, filename, status or generated score does not establish approval.
 
-In GitHub:
+## Run one task
 
-- Click **Use this template** (or download ZIP if you prefer).
+With a connected agent, use `docs/READ-WITH.md` and describe the requested asset. It routes through the matching view, workflow and rubric.
 
-## 2) Generate your v1 canon with AI (fastest)
+Without repository access, upload a complete pack from `packs/` and use `docs/FIRST-RUN-PROMPT-WRAPPER.md`. Prebuilt packs contain template content. After your canon changes, have an agent regenerate the pack, or manually assemble the exact files listed in the selected pack's source manifest from your current copy. Include the view, workflow, template, rubric and shared contracts as well as the seeds. Copying only seeds omits the task interface. Do not represent an old manifest as matching edited content.
 
-Open `docs/V1-INTAKE-FLOW.md`, copy the **FAST v1** prompt, paste it into ChatGPT/Claude, and answer the questions.
+If you cannot supply a required source, state that gap. The assistant can continue a draft where useful but must not invent evidence, voice approval, or a completed history check.
 
-When it returns a “Patch pack”, apply it by editing these files in GitHub:
+## Carry feedback forward
 
-- `kg/canon/product-truth.md`
-- `kg/canon/icp.md`
-- `kg/canon/category-pov.md`
-- `kg/canon/positioning.md`
-- `kg/canon/proof-map.md`
-- `kg/canon/voice.md`
-- (optional but recommended) `kg/canon/trust-boundaries.md`, `kg/canon/nomenclature.md`
+Give edits and decisions in ordinary language. Preserve the reviewed version, exact feedback, and actual publication state. Use `kg/loops/reflection-prompt.md` when a durable correction, material failure or repeated pattern warrants an upgrade. A clean run can finish without one. Request publication or scheduling separately when needed; drafting alone does not authorize it.
 
-## 3) Add proof artifacts (do at least one)
-
-Create at least 1 file under:
-
-- `kg/sources/`
-
-Copy `kg/sources/example-demo-video.md` as a template and replace it with your real artifact.
-
-Rule:
-- If a claim is risky (pricing/privacy/security/guarantees), it must be evidenced or labeled `TBD`.
-
-## 4) Run your first task with an LLM (no bundling required)
-
-Pick a view:
-
-- `context/landing-page-hero-v1.md`
-
-Open it and look at:
-
-- `seed_nodes:` (a list of files that are allowed to speak)
-
-Now do a “manual bundle”:
-
-1) Open each file listed in `seed_nodes`
-2) Copy/paste them into your LLM chat, one by one
-3) Then paste the prompt from `docs/FIRST-RUN-PROMPT-WRAPPER.md`
-
-Tip:
-- If your LLM supports file uploads, upload the files instead of copy/paste.
-
-Alternative (even easier):
-- Use a prebuilt pack from `packs/` and paste it into your LLM chat.
-- Start with: `packs/landing-page-hero-context-pack.md`
-
-## 5) Upgrade loop (make next run better)
-
-After you get output:
-
-1) Apply your edits to the output.
-2) Then use `kg/loops/reflection-prompt.md` to propose the smallest patch to:
-   - canon (`kg/canon/`)
-   - view (`context/`)
-   - template/workflow (`kg/templates/`, `kg/workflows/`)
-   - rubric (`kg/rubrics/`)
-
-Correct it twice, encode it once.
+GitHub Actions checks graph structure and generated-pack consistency on pushes and pull requests. A green run does not establish business accuracy, owner approval, writing quality, or required branch protection.

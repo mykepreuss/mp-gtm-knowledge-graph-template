@@ -77,7 +77,7 @@ Start with a landing page hero because it forces the whole contract:
 npm run bundle:view -- --view context/landing-page-hero-v1.md --out dist/context-pack.md
 ```
 
-This generates one file that you can hand to an agent (or paste into a prompting tool) as the frozen source of truth for that run.
+This generates a complete task snapshot: view, seeds, direct proof references, workflow, template, rubric, shared contracts and a source manifest. It does not verify factual freshness or owner approval. Placeholders remain placeholders.
 
 ## 6) Run with an agent (copy/paste)
 
@@ -87,13 +87,15 @@ Use:
 - `docs/V1-INTAKE-FLOW.md` (if you need the LLM to interview you to fill canon)
 - `AGENTS.md` (agent operating rules)
 
-## 7) After the run: upgrade the system, not the draft
+## 7) Review and carry useful feedback forward
 
-When something is wrong:
+The agent checks the actual output against its purpose, sources and rubric. Owner review and publication remain separate from the assessment. Use `kg/templates/output-artifact.md` for substantive reusable work. Small edits do not require a new artifact.
 
-- Fix canon (truth), view (routing), template (structure), or rubric/validations (checks).
-- Don’t just rewrite the output forever.
+An explicit durable correction, material failure or repeated pattern can justify a scoped rule upgrade. Use `kg/loops/reflection-prompt.md`; clean runs need no change. Record the actual decision and evidence in the existing output/handoff, then run:
 
-Rule of thumb:
+```bash
+npm run packs:build
+npm run check
+```
 
-Correct it twice, encode it once.
+The checks validate graph consistency, tested tooling and pack synchronization. They do not establish truth, approval, writing quality or live publication. Read `kg/schema/knowledge-graph-schema.md` for authority and conditional-freshness rules.

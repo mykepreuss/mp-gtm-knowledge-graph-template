@@ -3,12 +3,13 @@ id: kcg:canon:voice
 type: canon
 title: Voice (Executable Spec)
 owner: gtm
-status: active
-last_reviewed: 2026-03-04
+status: template
+last_reviewed: 2026-10-22
 tags:
   - canon
   - voice
   - writing
+links: []
 ---
 
 # Voice
@@ -19,8 +20,8 @@ Treat voice like a system:
 - defaults (how you structure)
 - examples and non-examples (what ships and what does not)
 
-## Required run header (every prompt must include)
-{{Paste this into your agent prompt wrapper as the “always-on” voice layer.}}
+## Context selection
+Read this voice layer for organization writing. Small edits need only the relevant guidance. For substantive work, select an audience/purpose match from [[kg/examples/index]] when approved references exist.
 
 ## Voice pillars
 - {{Pillar}}
@@ -34,5 +35,5 @@ Treat voice like a system:
 - “Unlock”, “revolutionary”, “game-changing”
 
 ## How to use this
-When you rewrite a line to match voice, add an example. When you refuse a line, add a non-example with the reason.
+Preserve supplied meaning, cadence, confidence and human detail. Do not turn every targeted edit into a rewrite. Add a source-linked example or non-example only when an authorized durable correction or repeated pattern justifies it. Approval is passage-specific; publication and agent preference alone do not establish it.
 
